@@ -2,6 +2,7 @@ package org.scala.test
 
 import java.text.SimpleDateFormat
 import java.util.Date
+import FunctionTest.-
 
 /**
   * Created by sgr on 2017/12/7/007.
@@ -27,7 +28,8 @@ object FunctionTest {
 
     //高阶函数
     println(exec(add, 1,3))
-    println(exec(sub, 1,3))
+    println(exec(this.-, 1,3))
+    println(exec(*,1,4))
 
 
     //匿名函数
@@ -36,6 +38,14 @@ object FunctionTest {
 
     val userDir = () => System.getProperty("user.dir")
     println(userDir())
+
+    /**
+      * 闭包函数
+      * 函数引用到函数外面定义的变量，定义这个函数的过程是将这个自由变量捕获而构成一个封闭的函数。
+      */
+    val factor = 3
+    val multiplier = (i:Int) => i * factor
+    println(multiplier(3))
 
   }
 
@@ -46,10 +56,17 @@ object FunctionTest {
     sum
   }
 
-  def sub( a:Int, b:Int ) : Int = {
+  def -( a:Int, b:Int ) : Int = {
     printf("%d - %d = ", a, b)
     var result:Int = 0
     result = a - b
+    result
+  }
+
+  def *( a:Int, b:Int ) : Int = {
+    printf("%d * %d = ", a, b)
+    var result:Int = 0
+    result = a * b
     result
   }
 

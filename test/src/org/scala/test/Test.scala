@@ -1,10 +1,23 @@
 package org.scala.test
+
+import java.util.Collections
+
 /**
   * Created by sgr on 2017/12/7/007.
   */
+class Test1{
+  def  main(args: Array[String]) {
+    println("class test")
+  }
+}
+/*class Test{
+  def main(args: Array[String]) {
+  }
+}*/
+
 object Test {
 
-  def main(args: Array[String]) {
+   def main(args: Array[String]) {
     //常量
     val s = "ssss"//常量不能再次赋值 s = "s" error
     //变量
@@ -80,6 +93,11 @@ object Test {
     for( a <- retVal){
       printf( "%d\t", a)
     }
+
+     val buf = new StringBuilder
+     buf += 'a'
+     buf ++= "bcdef"
+     println("\n" + buf.toString())
 
   }
 }
