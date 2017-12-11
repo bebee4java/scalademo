@@ -5,11 +5,7 @@ import java.util.Collections
 /**
   * Created by sgr on 2017/12/7/007.
   */
-class Test1{
-  def  main(args: Array[String]) {
-    println("class test")
-  }
-}
+
 /*class Test{
   def main(args: Array[String]) {
   }
