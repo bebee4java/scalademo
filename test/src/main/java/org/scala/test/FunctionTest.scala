@@ -2,7 +2,6 @@ package org.scala.test
 
 import java.text.SimpleDateFormat
 import java.util.Date
-import FunctionTest.-
 
 /**
   * Created by sgr on 2017/12/7/007.

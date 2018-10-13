@@ -1,7 +1,5 @@
 package org.scala.test
 
-import java.util.Collections
-
 /**
   * Created by sgr on 2017/12/7/007.
   */
