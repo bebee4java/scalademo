@@ -9,6 +9,7 @@ import java.util.Date
 object FunctionTest {
 
   def main(args: Array[String]) {
+    println(∑(x=>x)(1)(5))
     println(add(1,3)) //调用必须传值
     callByName(add(1,3))
     printStrings("a","b","c")
@@ -107,4 +108,21 @@ object FunctionTest {
     val dateFormated = dateFormat.format(date)
     printf("[%s]:%s\n", dateFormated , message)
   }
+
+  //  ∑f(x) a->b a到b按f(x)求和
+  def ∑(f: Int => Int)(a:Int)(b:Int) : Int = {
+      @annotation.tailrec
+      def loop(n:Int, acc:Int) :Int = {
+        if(n > b) {
+          println(s"n=${n}, acc=${acc}")
+          acc
+        } else {
+          println(s"n=${n}, acc=${acc}")
+          loop(n+1, acc+f(n))
+        }
+      }
+    loop(a,0)
+  }
+
+
 }

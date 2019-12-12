@@ -1,5 +1,7 @@
 package org.scala.test
 
+
+
 /**
   * Created by sgr on 2018/2/20/020.
   */
@@ -25,7 +27,7 @@ object ImplicitTest {
       new SpecialPerson(student.name)
     }else{
       println("Nil")
-      Nil
+      null
     }
   }
 

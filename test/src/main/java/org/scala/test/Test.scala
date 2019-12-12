@@ -93,5 +93,12 @@ object Test {
      buf ++= "bcdef"
      println("\n" + buf.toString())
 
+
+    val ss =
+      """
+        |这事一个多行
+        |字符串
+      """.stripMargin
+
   }
 }
